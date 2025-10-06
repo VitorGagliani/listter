@@ -1,0 +1,30 @@
+.banner{
+  background-color: #191919;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 25px;
+  align-items: center;
+}
+
+.banner-txt{
+  color: white;
+  justify-items: start;
+  position: relative;
+
+}
+
+.banner-txt h1{
+  font-size: 48px;
+  margin-bottom: 4px;
+}
+
+.banner-txt p{
+  font-size: 20px;
+  margin: 0;
+}
+
+.banner-img img{
+  width: 100%;
+}
