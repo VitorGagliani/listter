@@ -41,6 +41,7 @@ export const Formulario = (props) => {
           placeholder="Digite uma categoria para a tarefa"
           value={tag}
           onChange={(e)=>setTag(e.target.value)}
+          max="35"
           />
 
        <div className="botao">
