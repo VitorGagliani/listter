@@ -2,11 +2,8 @@ import "./style.css";
 
 export const Grid = ({ tarefas }) => {
   return (
-    // A div "grid" deve conter apenas os itens gerados pelo .map
     <div className="grid">
-      {/* É uma boa prática usar o singular ('tarefa') para o item
-        e o plural ('tarefas') para o array.
-      */}
+   
       {tarefas.map((tarefa, index) => (
         <div className="card" key={index}>
           <div className="card-content">
