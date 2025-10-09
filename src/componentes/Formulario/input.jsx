@@ -6,7 +6,7 @@ export const InputForm = (props) =>{
       <label className="form-label">
         {props.label}
       </label>
-      <input type="text" placeholder={props.placeholder} value={props.value} onChange={props.onChange} maxLength={props.max}/>
+      <input type="text" placeholder={props.placeholder} value={props.value} onChange={props.onChange} maxLength={props.max} required={props.required}/>
     </div>
   )
 }

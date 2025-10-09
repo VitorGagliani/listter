@@ -29,12 +29,15 @@ export const Formulario = (props) => {
           placeholder="Digite o nome da sua tarefa"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
+          required={true}
         />
         <InputForm
           label="Descrição da tarefa"
           placeholder="Digite a descrição da tarefa"
           value={descricao}
           onChange={(e)=>setDescricao(e.target.value)}
+          required={true}
+
         />
         <InputForm
           label="Categoria da tarefa"
