@@ -13,7 +13,13 @@ function App() {
       tag:tag,
       descricao:descricao
     };
+
+
     setTarefas([...tarefas, novaTarefa]);
+    }
+
+    const deletarTarefa = (titulo) => {
+      setTarefas(tarefas.filter(tarefa => tarefa.titulo !== titulo));
     }
 
     const [tarefas, setTarefas] = useState([]);
@@ -23,7 +29,7 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario aoSalvar={adicionarTarefa}/>
-      <Grid tarefas={tarefas} />
+      <Grid tarefas={tarefas} deletarTarefa={deletarTarefa} />
     </div>
   );
 }

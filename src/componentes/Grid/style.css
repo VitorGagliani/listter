@@ -3,22 +3,37 @@
   background-color: #191919;
   padding: 100px 0; 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .card-content{
+  position: relative;
   background-color: #6C63FF;
   max-width: 320px;
   min-width: 300px;
   min-height: 300px;
-  padding: 20px;
   border-radius: 4px;
   color: white;
-  margin: 0 40px;
 }
 
+.card-title{
+  position: relative;
+}
+.card-title h2{
+  padding: 10 px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.icon-close{
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
 
 .card h2,p{
@@ -38,4 +53,8 @@
   text-align: start;
   margin: 23px;
   margin-top: 32px;
+}
+
+.card{
+  padding: 10px;
 }
