@@ -1,11 +1,16 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { Banner } from './componentes/Banner/index.jsx';
 import { Formulario } from './componentes/Formulario/index.jsx';
 import { Grid } from './componentes/Grid/index.jsx';
 
 function App() {
+
+   const [tarefas, setTarefas] = useState(() => {
+    const tarefasSalvas = localStorage.getItem("tarefas");
+    return tarefasSalvas ? JSON.parse(tarefasSalvas) : [];
+  });
 
   const adicionarTarefa  = (titulo, tag, descricao) => {
     const novaTarefa = {
@@ -22,7 +27,9 @@ function App() {
       setTarefas(tarefas.filter(tarefa => tarefa.titulo !== titulo));
     }
 
-    const [tarefas, setTarefas] = useState([]);
+  useEffect(() => {
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }, [tarefas]);
   
 
   return (
