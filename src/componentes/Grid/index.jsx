@@ -9,7 +9,7 @@ export const Grid = ({ tarefas, deletarTarefa }) => {
         <div className="card" key={index}>
           <div className="card-content">
             <div className="card-title">
-      <IoCloseCircle className="icon-close" onClick={() => deletarTarefa(tarefas.titulo)} />
+            <IoCloseCircle className="icon-close" onClick={() => deletarTarefa(tarefas.id)} />
             <h2>{tarefas.titulo}</h2>
             </div>
             <p>{tarefas.tag}</p>
@@ -18,7 +18,6 @@ export const Grid = ({ tarefas, deletarTarefa }) => {
           </div>
         </div>
       ))}
-      {/* Os cards estáticos que estavam aqui foram removidos. */}
     </div>
   );
 };
